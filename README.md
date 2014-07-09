@@ -16,7 +16,7 @@ localDate.js can be used on any text-enabled element, e.g. `<p> <div> <span> <td
 The above `<span>` will display something akin to `4:02:42PM 7-8-2014`, unless JavaScript is disabled, in which case the user will see the text contained within the `<span>`. The values you see here for `data-locale`, `data-source`, and `data-format` are the defaults, so if you leave any of these out, the values I used in this example are what you'll get.
 
 ### Demo: ###
-[http://bronstrup.com/demos/localDate.js/index.html] http://bronstrup.com/demos/localDate.js/index.html "localDate.js Demo"
+http://bronstrup.com/demos/localDate.js/index.html
 
 ### Compatibility: ###
 Tested and appears to be working in reasonably-recent versions of Safari, Chrome, and Firefox, as well as IE5 and newer (with fixes for IE5-8) and iOS and Android browsers
