@@ -9,10 +9,12 @@ An efficient and configurable timezone- and DST-aware JavaScript time/date forma
 localDate.js can be used on any text-enabled element, e.g. `<p> <div> <span> <td>` with `class="localDate"` (by default) or the CSS selector passed into the `localDate.init()` function.
 
 ### Example: ###
-`<span class="localDate" data-source="render" data-format="$h:$M:$S$A $n-$d-$Y" data-locale="local">
+```
+<span class="localDate" data-source="render" data-format="$h:$M:$S$A $n-$d-$Y" data-locale="local">
 	Oops! Normally, you would see your local time here, but you've got JavaScript disabled!
 </span>
-<script type="text/javascript">localdate.init();</script>`
+<script type="text/javascript">localdate.init();</script>
+```
 
 The above `<span>` will display something akin to `4:02:42PM 7-8-2014`, unless JavaScript is disabled, in which case the user will see the text contained within the `<span>`. The values you see here for `data-locale`, `data-source`, and `data-format` are the defaults, so if you leave any of these out, the values I used in this example are what you'll get.
 
@@ -167,7 +169,8 @@ Get creative!
 
 For example: You can pass a DOM node in to `localDate.initSingle()` (or pass an id into `localDate.init()`) after setting that element's `data-source` to a UNIX timestamp to display the time-zone-adjusted (or local) formatted representation of that timestamp. If you set up your own timing routine, start with a `data-source` of `0`, and set the node's `data-locale` to `UTC`, you can, for example, create a millisecond-accurate stopwatch by repeatedly calling `localDate.render()` on your element. See here:
 
-`<span id="stopwatch" data-source="0" data-locale="UTC" data-format="$T:$M:$S.$Zsec"></span>
+```
+<span id="stopwatch" data-source="0" data-locale="UTC" data-format="$T:$M:$S.$Zsec"></span>
 <script type="text/javascript">
 	var el = document.getElementById("stopwatch");
 	var startTime = new Date().getTime();
@@ -179,4 +182,5 @@ For example: You can pass a DOM node in to `localDate.initSingle()` (or pass an 
 		el.setAttribute("data-source", time);
 		localDate.render(el);
 	}, 33);
-</script>`
+</script>
+```
