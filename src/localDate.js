@@ -4,8 +4,8 @@
  *
  * Created by Keith Bronstrup on 7/8/14.
  *
- * Release 1.0.1
- * Release date 7/8/14
+ * Release 1.0.2
+ * Release date 7/9/14
  *
  * For documentation, see included README.md
  */
