@@ -1,0 +1,9 @@
+# OSX Cruft
+.DS_Store
+
+# IDE Cruft (IntelliJ IDEA)
+/.idea/
+*.iml
+
+# My own local notes and what have you
+/offline/
