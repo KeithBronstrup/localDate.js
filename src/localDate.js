@@ -4,7 +4,7 @@
  *
  * Created by Keith Bronstrup on 7/8/14.
  *
- * Release 1.0.0
+ * Release 1.0.1
  * Release date 7/8/14
  *
  * For documentation, see included README.md
@@ -496,7 +496,8 @@ var localDate = {
 	 * @param refresh (int) How often (in ms) to refresh this element; 0 for never
 	 */
 	"render": function(el, refresh) {
-		el = el ? el : false;
+		el      = el      ? el      : false;
+		refresh = refresh ? refresh : 0;
 
 		if (!el) return;
 
@@ -595,8 +596,10 @@ var localDate = {
 			case "$z": // Milliseconds without leading zeroes (e.g. 2 or 46)
 			case "$Z": // Milliseconds with leading zeroes (e.g. 002 or 046 or 802)
 				ms = date.getUTCMilliseconds();
-				if (ms === "$Z") {
-					if (ms < 10) {
+				if (arg === "$Z") {
+					if (ms == 0) {
+						ms = "000";
+					} else if (ms < 10) {
 						ms = "00"+ms;
 					} else if (ms < 100) {
 						ms = "0"+ms;
