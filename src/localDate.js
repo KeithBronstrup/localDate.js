@@ -541,7 +541,7 @@ var localDate = {
 			if (this.tz[el.getAttribute("data-locale")].DST) {
 				var nowOffset = localTime.getTimezoneOffset();
 				localTime.setDate(0);
-				if (nowOffset != localTime.getTimezoneOffset()) time += 3600000;
+				if (nowOffset == localTime.getTimezoneOffset()) time += 3600000;
 			}
 		}
 
