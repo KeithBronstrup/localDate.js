@@ -22,7 +22,7 @@ The above `<span>` will display something akin to `4:02:42PM 7-8-2014`, unless J
 ---
 
 ### Demo: ###
-http://bronstrup.com/demos/localDate.js/index.html
+https://bronstrup.com/demos/localDate.js/index.html (demo currently offline)
 
 ---
 
